@@ -7,9 +7,12 @@ xhttp.onreadystatechange=function() {
     document.write('{\n"image": "' + this.responseText + '"\n}');
   }
 };
-xhttp.open("GET", "http://thecatapi.com/api/images/get?format=src&type=gif", true);
+//xhttp.open("GET", "http://thecatapi.com/api/images/get?format=src&type=gif", true);
+xhttp.open("GET", "http://thecatapi.com/api/images/get", true);
 xhttp.send();
 </script>
 </head>
-<body />
+<body>
+<img src="http://thecatapi.com/api/images/get" alt="IUFHqulhwdlu2HHuiqwhdQIOWUHnxQLmxqwojcnjkq" />
+</body>
 </html>
