@@ -1,20 +1,159 @@
-<html lang="en"><head>
+<html>
 <head>
 <title>Error</title>
-<!-- Meta tag Keywords -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="keywords" content="Error, Page, API">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Meta tag Keywords -->
-<!-- css files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-<!-- online-fonts -->
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-<!--//online-fonts -->
-  <script>
+<script src="particles.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700,800');
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button:hover {
+    background-color: #ffffff; /* Green */
+    color: white;
+}
+/** Styles for the 403 Page **/
+.particle-error,
+.permission_denied,
+#particles-js {
+  width: 100%;
+  height: 100%;
+  margin: 0px !important;
+}
+#particles-js {
+  position: fixed !important;
+  opacity: 0.23;
+}
+.permission_denied {
+  background: #2471e5 !important;
+}
+.permission_denied a {
+  text-decoration: none;
+}
+.denied__wrapper {
+  max-width: 390px;
+  width: 100%;
+  height: 390px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 8vh;
+}
+.permission_denied h1 {
+    text-align:center;
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+    font-size: 100px;
+    margin-bottom: 0px;
+  font-weight: 800;
+}
+.permission_denied h3 {
+  text-align: center;
+  color: #fff;
+  font-size:19px;
+  line-height: 23px;
+  max-width: 330px;
+  margin: 0px auto 30px auto;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+}
+.permission_denied h3 span {
+  position: relative;
+  width: 65px;
+  display:inline-block;
+}
+.permission_denied h3 span:after {
+   content: '';
+   border-bottom: 3px solid #FFBB39;
+   position: absolute;
+   left: 0;
+   top: 43%;
+   width: 100%;
+}
+.denied__link {
+  background: none;
+  color: #fff;
+  padding: 12px 0px 10px 0px;
+  border: 1px solid #fff;;
+  outline: none;
+  border-radius: 7px;
+  width: 150px;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 25px;
+ font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+}
+.denied__link:hover {
+  color: #FFBB39;
+  border-color: #FFBB39;
+  cursor: pointer;
+  opacity: 1.0;
+}
+.permission_denied .stars {
+  animation: sparkle 1.6s infinite ease-in-out alternate;
+}
+@keyframes sparkle {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+#astronaut {
+  width: 43px;
+  position: absolute;
+  right: 20px;
+  top: 210px;
+  animation: spin 4.5s infinite linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+@media (max-width: 600px) {
+  .permission_denied h1 {
+      font-size: 75px;
+  }
+  .permission_denied h3 {
+      font-size:16px;
+      width: 200px;
+      margin: 0 auto;
+      line-height: 23px;
+  }
+  .permission_denied h3 span {
+    width: 60px;
+  }
+  #astronaut {
+    width: 35px;
+    right: 40px;
+    top: 170px;
+  }
+}
+.saturn,
+.saturn-2,
+.hover {
+  animation: hover 2s infinite ease-in-out alternate;
+}
+@keyframes hover {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+</style>
+<script>
 function $_GET(param) {
 	var vars = {};
 	window.location.href.replace( location.hash, '' ).replace( 
@@ -47,95 +186,138 @@ function setup2(){
 	}
 	window.title = _set || "Error";
 }
+function darkTheme(){
+	console.log("use dark theme");
+}
 function setup(){
 	setup1();
 	setup2();
+	if (window.location.match(/#dark/)){
+		darkTheme();
+	}
 }
+ var particles = {
+      "particles": {
+        "number": {
+          "value": 160,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 1,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 1,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 4,
+            "size_min": 0.3,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 0.17,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 600
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "bubble"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "repulse"
+          },
+          "resize": false
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 250,
+            "size": 0,
+            "duration": 2,
+            "opacity": 0,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 400,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+   };
+   particlesJS('particles-js', particles, function() {
+     console.log('callback - particles.js config loaded');
+   });
 </script>
-</head><body style="" onload="setup();">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
-<script>
-(function(){
-	if(typeof _bsa !== 'undefined' && _bsa) {
-  		// format, zoneKey, segment:value, options
-  		_bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
-  	}
-})();
-</script>
-<script>
-(function(){
-if(typeof _bsa !== 'undefined' && _bsa) {
-	// format, zoneKey, segment:value, options
-	_bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
-}
-})();
-</script>
-<script>
-(function(){
-	if(typeof _bsa !== 'undefined' && _bsa) {
-  		// format, zoneKey, segment:value, options
-  		_bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
-  	}
-})();
-</script>
-<div class="header">
-	<h1>dark error page</h1>
+</head>
+<body>
+<body class="permission_denied" onload="setup();">
+  <div id="particles-js"></div>
+  <div class="denied__wrapper">
+  <h1 id="error-title" onload="setup2();">Error</h1>
+  <h3 id="error-message" onload="setup1();">An error ocurred</h3>
+  <a href="about:blank" onclick="window.close();"><button class="denied__link">Close</button></a>
 </div>
-<!---728x90--->
-<div class="w3-main">
-	<div class="agile-info">
-		<h2 id="error-title">Error</h2>
-		<h3 id="error-message">An error ocurred</h3>
-	</div>
-</div>
-<!---728x90--->
-<script src="//publisher.eboundservices.com/dynamicAds/dynamicScript.js"></script>
-<div style="margin: 0 auto;text-align: center;margin-top: 5px;"><script>
-var allowedNumberOfEboundDynamicAdds = 4;
-var sizesEboundDynamicAdsDesktop = ['728x90'];
-var sizesEboundDynamicAdsTablet = ['728x90'];
-var sizesEboundDynamicAdsMobile = ['320x100'];
-eboundAdsTagByDevice(sizesEboundDynamicAdsDesktop,sizesEboundDynamicAdsTablet,sizesEboundDynamicAdsMobile, 'ebound_header_tag');
-
-if(typeof user_tag_config == 'undefined'){
-	var user_tag_config = {};
-}
-user_tag_config['ebound_header_tag'] = {};
-user_tag_config['ebound_header_tag']['desktop'] = {};
-user_tag_config['ebound_header_tag']['desktop']['cpm'] = '';
-user_tag_config['ebound_header_tag']['desktop']['adsCode'] = '';
-user_tag_config['ebound_header_tag']['tablet'] = {};
-user_tag_config['ebound_header_tag']['tablet']['cpm'] = '';
-user_tag_config['ebound_header_tag']['tablet']['adsCode'] = '';
-user_tag_config['ebound_header_tag']['mobile'] = {};
-user_tag_config['ebound_header_tag']['mobile']['cpm'] = '';
-user_tag_config['ebound_header_tag']['mobile']['adsCode'] = '';
-</script></div>
-<div class="footer-w3l">
-	<p>© 2016 Dark Error Page. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-</div>
-<!---728x90--->
-<script src="//publisher.eboundservices.com/dynamicAds/dynamicScript.js"></script>
-<div style="margin: 0 auto;text-align: center;margin-top: 5px;"><script>
-var allowedNumberOfEboundDynamicAdds = 4;
-var sizesEboundDynamicAdsDesktop = ['728x90'];
-var sizesEboundDynamicAdsTablet = ['728x90'];
-var sizesEboundDynamicAdsMobile = ['320x100'];
-eboundAdsTagByDevice(sizesEboundDynamicAdsDesktop,sizesEboundDynamicAdsTablet,sizesEboundDynamicAdsMobile, 'ebound_header_tag');
-
-if(typeof user_tag_config == 'undefined'){
-	var user_tag_config = {};
-}
-user_tag_config['ebound_header_tag'] = {};
-user_tag_config['ebound_header_tag']['desktop'] = {};
-user_tag_config['ebound_header_tag']['desktop']['cpm'] = '';
-user_tag_config['ebound_header_tag']['desktop']['adsCode'] = '';
-user_tag_config['ebound_header_tag']['tablet'] = {};
-user_tag_config['ebound_header_tag']['tablet']['cpm'] = '';
-user_tag_config['ebound_header_tag']['tablet']['adsCode'] = '';
-user_tag_config['ebound_header_tag']['mobile'] = {};
-user_tag_config['ebound_header_tag']['mobile']['cpm'] = '';
-user_tag_config['ebound_header_tag']['mobile']['adsCode'] = '';
-</script></div>
-
-</body></html>
+</body>
+</html>
