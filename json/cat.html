@@ -1,12 +1,17 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", "http://thecatapi.com/api/images/get?format=src&type=gif", false );
-xmlHttp.send( null );
-document.write(`{\n  "image": "${xmlHttp.responseText}"\n}`);
+$.get(
+    "http://thecatapi.com/api/images/get?format=src&type=gif",
+    {paramOne : 1, paramX : 'abc'},
+    function(data) {
+       document.write(data);
+    }
+);
 </script>
 </head>
 <body>
+<p>Please wait...</p>
 </body>
 </html>
