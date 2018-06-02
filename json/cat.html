@@ -22,7 +22,7 @@
 		curl_close($ch);
 		return $html;
 	}
-    echo Send('{\n"image": "http://thecatapi.com/api/images/get?format=src&type=gif"\n}');
+    echo '{\n"image":' + Send("http://thecatapi.com/api/images/get?format=src&type=gif") + '\n}';
 ?>
 </script>
 </head>
