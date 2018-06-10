@@ -1,6 +1,5 @@
 <html prefix="og: http://ogp.me/ns#" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta charset="utf-8"><meta charset="UTF-8">
 <title>Seb Bot API Docs</title>
-<script src="https://gist.github.com/thelucyclub/171056c8b800d0a093643dd671b93428.js"></script>
 <meta property="image" content="https://images-ext-2.discordapp.net/external/x8JfnsVYSKcsmCINfKw0x4YTLWWbHNTrCgIuyWtxQrs/https/cdn.discordapp.com/avatars/408718297400475668/c7b9be183d4cf2029912533e3afc2e69.png">
 <meta name="description" content="Seb Bot API documentation">
 <meta name="twitter:image" content="https://images-ext-2.discordapp.net/external/x8JfnsVYSKcsmCINfKw0x4YTLWWbHNTrCgIuyWtxQrs/https/cdn.discordapp.com/avatars/408718297400475668/c7b9be183d4cf2029912533e3afc2e69.png">
@@ -17,112 +16,7 @@
   <div id="file-meme-readme-md" class="file">
     
   <div id="readme" class="readme blob instapaper_body">
-    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-images-and-memes" class="anchor" aria-hidden="true" href="#images-and-memes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoints</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3><a id="user-content-random-image" class="anchor" aria-hidden="true" href="#random-image"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rule34 Search</h3>
-<h4><a id="user-content-method-get" class="anchor" aria-hidden="true" href="#method-get"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>GET /r34.php</code></h4>
-
-<p>Gets a list of rule34 posts with the specified tag</p>
-<h4><a id="user-content-query-parameters" class="anchor" aria-hidden="true" href="#query-parameters"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Query parameters:</h4>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>type</th>
-<th>description</th>
-
-
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tag</td>
-<td>string</td>
-<td>tag of the image you want to get</td>
-
-
-</tr>
-</tbody></table>
-<p><strong>Returns:</strong> <code>XML</code> Post Collection</p>
-<h4><a id="user-content-example" class="anchor" aria-hidden="true" href="#example"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4><div class="highlight highlight-source-json" style="font-size: 16px;"><pre style="background-color: red; color: white;">Requesting http://sbapi.000webhostapp.com/r34.php?!=mlp
-</pre></div>
-
-<div class="highlight highlight-source-json"><pre>&lt;posts&gt;
-    &lt;post height="1171" score="0" file_url="https://img.rule34.xxx/images/2514/6dbd917772c9b679ab10a790f73c22f9.jpeg"
-    parent_id="" sample_url="https://img.rule34.xxx/images/2514/6dbd917772c9b679ab10a790f73c22f9.jpeg"  sample_width="1300"
-    sample_height="1171" preview_url="https://rule34.xxx/thumbnails/2514/thumbnail_6dbd917772c9b679ab10a790f73c22f9.jpg"
-    rating="q" tags="blue_eyes female female_only green_hair long_hair looking_at_viewer merunyaa oni panties solo"
-    id="2788195" width="1300"  change="1527994144" md5="6dbd917772c9b679ab10a790f73c22f9" creator_id="123168" has_children="false"
-    created_at="Sun Jun 03 04:49:03 +0200 2018" status="active" source="https://twitter.com/meru_nyaa/status/1002952440885456897"
-    has_notes="false" has_comments="false" preview_width="150" preview_height="135"/&gt;
-&lt;/posts&gt;
-</pre></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</article>
+   <script src="https://gist.github.com/thelucyclub/171056c8b800d0a093643dd671b93428.js"></script>
   </div>
 
   </div>
